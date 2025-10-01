@@ -16,38 +16,3 @@
     from, to { border-color: transparent }
     50% { border-color: white }
 }
-
-.tiles {
-    display: flex;
-    gap: 2rem;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.tile {
-    background-color: transparent;
-    border: 2px solid white;
-    padding: 2rem;
-    width: 200px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    opacity: 0;
-    transform: scale(0.8);
-    transition: all 0.5s ease-in-out;
-}
-
-.tile:hover {
-    transform: scale(1.05);
-    /*background-image: url('background.jpg'); /* optional */
-    background-size: cover;
-    color: skyblue;
-    opacity: 1;
-}
-
-.visible {
-    opacity: 1;
-    transform: scale(1);
-}
