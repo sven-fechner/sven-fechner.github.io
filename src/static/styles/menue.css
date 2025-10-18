@@ -1,0 +1,144 @@
+/* --- Alles fuer das allgemeine Erscheinungsbild --- */
+
+.content {
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* --- Alles fuer den Eingangstext --- */
+
+.intro {
+  text-align: center;
+  height: 4rem;
+  margin-top: 8px;
+  font-size: 1.5rem;
+  width: 100%;
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease-in-out forwards;
+  animation-delay: 0.1s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Alles fuer die Kacheln --- */
+
+.tiles {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 4rem); /* volle Höhe abzüglich Intro */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.tile {
+    flex: 1 1 30%;
+    height: 100%;
+    border: 2px solid white;
+    background-color: rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.tile.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* --- Kachel fuer Persoenliches --- */
+#personal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/static/images/personal_hover.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: -1;
+}
+
+#personal:hover::before {
+  opacity: 0.25;
+}
+
+#personal .hover-quote {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  font-style: italic;
+  font-size: 1rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#personal:hover .hover-quote {
+  opacity: 1;
+}
+
+#practice {
+
+}
+
+#contact {
+
+}
+
+/* Nur fuer PC Endnutzer */
+@media (min-width: 768px) {
+    /* Fuer die Kacheln, welche NICHT gehovered werden */
+    .tiles:hover .tile:not(:hover) {
+        transform: scale(0.9);
+        opacity: 0.6;
+        filter: blur(1px);
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Fuer die Kachel, welches gehovered wird */
+    .tile:hover {
+        transform: scale(1.05);
+        /*background-image: url('background.jpg'); /* optional */
+        background-size: cover;
+        color: skyblue;
+        border-color: skyblue;
+        opacity: 1;
+        filter: none;
+        z-index: 1;
+    }
+}
+
+/* Nur fuer mobile Endnutzer */
+@media (max-width: 768px) {
+  .tiles {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .tile {
+    height: 200px;
+    font-size: 1.2rem;
+  }
+}

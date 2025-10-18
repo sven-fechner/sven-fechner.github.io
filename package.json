@@ -1,0 +1,24 @@
+{
+  "name": "sven-fechner.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sven-fechner/sven-fechner.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sven-fechner/sven-fechner.github.io/issues"
+  },
+  "homepage": "https://github.com/sven-fechner/sven-fechner.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
