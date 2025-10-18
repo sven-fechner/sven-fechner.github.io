@@ -99,12 +99,68 @@
   opacity: 1;
 }
 
-#practice {
-
+#practice::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /*background-image: url('/static/images/personal_hover.jpg');*/
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: -1;
 }
 
-#contact {
+#practice:hover::before {
+  opacity: 0.25;
+}
 
+#practice .hover-quote {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  font-style: italic;
+  font-size: 1rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#practice:hover .hover-quote {
+  opacity: 1;
+}
+
+#contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /*background-image: url('/static/images/personal_hover.jpg');*/
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: -1;
+}
+
+#contact:hover::before {
+  opacity: 0.25;
+}
+
+#contact .hover-quote {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  font-style: italic;
+  font-size: 1rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#contact:hover .hover-quote {
+  opacity: 1;
 }
 
 /* Nur fuer PC Endnutzer */
