@@ -66,6 +66,19 @@
   transform: scale(1);
 }
 
+/* --- Link-Wrapper für klickbare Kacheln --- */
+.tile-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  flex: 1 1 30%;
+  height: 100%;
+}
+
+.tile-link .tile {
+  height: 100%;
+}
+
 /* --- Kachel fuer Persoenliches --- */
 #personal::before {
   content: "";
