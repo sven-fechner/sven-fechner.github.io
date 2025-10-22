@@ -1,0 +1,19 @@
+/* --- Zurück-Button im Kachel-Stil --- */
+.tile.back-button {
+  align-self: flex-start;
+  margin-bottom: 2rem;
+}
+
+.tile-link {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #222;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.tile-link:hover {
+  background-color: #444;
+}
