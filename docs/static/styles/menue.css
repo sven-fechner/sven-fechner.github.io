@@ -105,7 +105,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url('/static/images/personal_hover.jpg');
+  background-image: url('/static/images/profile_hover.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0;
