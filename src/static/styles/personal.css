@@ -1,4 +1,13 @@
 /* --- Gesamtstruktur --- */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
 .personal-page {
   display: flex;
   flex-direction: row;
@@ -74,11 +83,38 @@
 }
 
 /* --- Rechte Timeline --- */
-.timeline {
-  flex: 1 1 65%;
-  position: relative;
-  padding: 2rem 1rem;
+
+/* --- Wrapper für Überschrift + Timeline --- */
+.timeline-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
   box-sizing: border-box;
+}
+
+/* --- Überschrift und Unterzeile --- */
+.timeline-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.timeline-subheading {
+  text-align: center;
+  font-size: 1rem;
+  color: skyblue;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+/* --- Timeline selbst --- */
+.timeline {
+  position: relative;
+  padding: 1rem 0;
 }
 
 .timeline::before {
@@ -93,24 +129,63 @@
   z-index: 0;
 }
 
+/* --- Einzelne Einträge --- */
 .timeline-entry {
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr;
+  align-items: center;
   position: relative;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.timeline-point {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border: 2px solid skyblue;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-entry:hover .timeline-point {
+  background-color: skyblue;
+  box-shadow: 0 0 8px skyblue;
+}
+
+.timeline-entry:hover .entry {
+  background-color: rgba(135, 206, 235, 0.1); /* leichtes Skyblue */
+  border-color: skyblue;
+  transform: scale(1.02);
+  transition: all 0.2s ease;
 }
 
 .entry {
-  width: 45%;
   background-color: rgba(255,255,255,0.05);
   border: 1px solid white;
   border-radius: 8px;
   padding: 1rem;
-  box-sizing: border-box;
   color: white;
   font-size: 1rem;
   z-index: 1;
+  transition: all 0.2s ease;
+}
+
+.entry-role {
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.entry-time {
+  font-style: italic;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 0.2rem;
+}
+
+.entry-place {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
 }
 
 .education {
@@ -123,34 +198,25 @@
 
 /* --- Responsive Anpassung --- */
 @media (max-width: 768px) {
-  .personal-page {
-    flex-direction: column;
+  .timeline-entry {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    text-align: left;
   }
 
-  .sidebar, .timeline {
-    width: 100%;
+  .timeline-point {
+    margin: 1rem 0;
+  }
+
+  .education, .job {
+    text-align: left;
   }
 
   .timeline::before {
     left: 10px;
     transform: none;
   }
-
-  .timeline-entry {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .entry {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .education, .job {
-    text-align: left;
-  }
 }
-
 
 /* --- Zurück-Button im Kachel-Stil --- */
 .tile.back-button {
