@@ -66,6 +66,27 @@
   transform: scale(1);
 }
 
+.tile-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+}
+
+.tile-subline {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.3rem;
+  font-style: italic;
+  display: block;
+}
+
+.tile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 /* --- Link-Wrapper für klickbare Kacheln --- */
 .tile-link {
   text-decoration: none;
@@ -80,7 +101,7 @@
 }
 
 /* --- Kachel fuer Persoenliches --- */
-#personal::before {
+#profile::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -92,11 +113,11 @@
   z-index: -1;
 }
 
-#personal:hover::before {
+#profile:hover::before {
   opacity: 0.25;
 }
 
-#personal .hover-quote {
+#profile .hover-quote {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
@@ -108,11 +129,11 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-#personal:hover .hover-quote {
+#profile:hover .hover-quote {
   opacity: 1;
 }
 
-#practice::before {
+#output::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -124,11 +145,11 @@
   z-index: -1;
 }
 
-#practice:hover::before {
+#output:hover::before {
   opacity: 0.25;
 }
 
-#practice .hover-quote {
+#output .hover-quote {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
@@ -140,7 +161,7 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-#practice:hover .hover-quote {
+#output:hover .hover-quote {
   opacity: 1;
 }
 
