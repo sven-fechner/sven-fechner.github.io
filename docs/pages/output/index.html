@@ -17,6 +17,87 @@
       ← Zurück
     </a>
   </div>
+  <section class="output-grid">
+    
+    <!-- Linke Spalte: Zertifikate -->
+    <section class="output-column cert-column">
+      <h2>Zertifikate</h2>
+      <article class="cert-entry">
+        <h3 class="entry-title">ISTQB Certified Tester Foundation Level</h3>
+        <p class="entry-meta">Foundation Level • CTFL • v4.0 • 2024</p>
+        <p>Vermittelt grundlegende Konzepte des Softwaretestens, inklusive Testprozessen, Fehlerarten und Testdesigntechniken.</p>
+        <a href="/static/docs/istqb_ctfl.pdf" target="_blank">Zertifikat ansehen</a>
+      </article>
+      <article class="cert-entry">
+        <h3 class="entry-title">ISTQB Test Manager</h3>
+        <p class="entry-meta">Advanced Level • CTAL-TM • v2.0 • 2024</p>
+        <p>Qualifiziert für die Planung, Steuerung und Bewertung von Testaktivitäten in komplexen Projekten mit Fokus auf Risiko und Qualitätssicherung.</p>
+        <a href="/static/docs/istqb_ctal-tm.pdf" target="_blank">Zertifikat ansehen</a>
+      </article>
+      <article class="cert-entry">
+        <h3 class="entry-title">ISTQB Test Automation Engineer</h3>
+        <p class="entry-meta">Advanced Level • CTAL-TAE • v2.0 • 2025</p>
+        <p>Befähigt zur Konzeption, Implementierung und Wartung automatisierter Tests in professionellen Testarchitekturen.</p>
+        <a href="/static/docs/istqb_ctal-tae.pdf" target="_blank">Zertifikat ansehen</a>
+      </article>
+    </section>
+
+    <!-- Mittlere Spalte: Abschlussarbeiten -->
+    <section class="output-column thesis-column">
+      <h2>Abschlussarbeiten</h2>
+        <article class="thesis-entry">
+          <p class="thesis-type">Masterarbeit</p>
+          <h3 class="thesis-title">Integration von neuronalen Netzen in eine Desktopanwendung zur medizinischen Bildverarbeitung</h3>
+          <p class="abstract-preview">
+            In dieser Arbeit geht es darum herauszufinden, in wie fern sich neuronale Netze in Desktopanwendungen einbauen und benutzen lassen...
+          </p>
+        <details>
+          <summary>Abstract weiterlesen</summary>
+          <p class="abstract-full">
+          Im spezifischen geht es hier darum, ein Video mit einem neuronalen Netz zu analysieren und Ergebnisse der Analyse wieder ausgeben zu lassen.
+          Ziel ist es, so eine Anwendung in deutschen Arztpraxen benutzen zu können. Dafür wurde zuerst eine Marktanalyse durchgeführt, um herauszufinden, mithilfe welcher Werkzeuge man aktuell Desktopanwendungen schreibt.
+          Die so entstandene Liste, welche die Anzahl an Nennungen berücksichtigt, wurde dann hinsichtlich der geeignetsten Programmiersprachen für das Machine Learning und die Integration eines neuronalen Netzes im PyTorch-Format gefiltert.
+          Bei der Analyse, welche Betriebssysteme in deutschen Arztpraxen verwendet werden, offenbarte sich, dass hier Windows dominierend ist. Daher wurden die Werkzeuge ebenfalls dahingehend gefiltert, ob sie Anwendungen für Windows schreiben können.
+          Es stellte sich heraus, dass PyTorch von sich aus C++, Python und Java unterstützt. Um den zeitlichen Rahmen der Arbeit zu beachten wurden insgesamt drei Werkzeuge ausgewählt, je eins pro eben genannter Programmiersprache.
+          Namentlich sind das UWP, PyQt6 und JavaFX. In Folge war ich aber nur mit PyQt6 in der Lage ein vollständig funktionierende und den Wünschen entsprechende Anwendung zu schreiben.
+          In JavaFX gab es Probleme aufgrund des Multithreadings und generell mit der Auswertung der einzelnen Bilder.
+          In UWP ließ sich die benötigte Bibliothek OpenCV nicht einbinden. Der Fehler könnte hier aber auch auf die von Microsoft empfohlene Entwicklungsumgebung zurückzuführen sein.
+          Ergebnisse der Performanz konnte ich so nur für die Anwendung von PyQt6 und JavaFX sammeln. Dabei stellte sich heraus, dass die PyQt6-Anwendung sowohl schneller als auch ressourcensparender arbeitet als die JavaFX-Anwendung.
+          Daraus schließend steht die Vermutung, dass Python im Allgemeinen besser für so ein Unterfangen geeignet zu sein scheint als Java.
+          </p>
+        </details>
+          <a href="/static/docs/master-auszug.pdf" target="_blank">Auszug ansehen</a>
+      </article>
+      <article class="thesis-entry">
+        <p class="thesis-type">Bachelorarbeit</p>
+        <h3 class="thesis-title">Modellierung und Simulation zur COVID-19 Pandemie unter Verwendung von Open-Source-Software</h3>
+        <p class="abstract-preview">
+          Anhand der verwendeten Applikationen soll aufgezeigt werden, über welches Spektrum sich die Open Source Applikationen in Bezug auf COVID-19 erstrecken...
+        </p>
+        <details>
+          <summary>Abstract weiterlesen</summary>
+          <p class="abstract-full">
+          Außerdem wird überprüft, welche Modelle den verschiedenen Applikationen als Grundlage dienen.
+          Weiterhin soll herausgefunden werden, in wie weit die Applikationen Wert auf Benutzbarkeit und Übertragbarkeit legen, sprich Wert darauf legen, vom Nutzer und Entwickler einfach verstanden, angewendet und bearbeitet zu werden.
+          Ebenfalls werden die Modelle und Simulationen, die von den Applikationen durchgeführt werden, validiert, verifiziert und evaluiert.
+          Dadurch wird festgestellt, ob die Applikationen überhaupt gültig und glaubwürdig sind. Auch wird festgestellt, ob diese ihren Zweck erfüllen und welche Fragen durch die Modellierung und Simulation auftreten.
+          </p>
+        </details>
+        <a href="/static/docs/master-auszug.pdf" target="_blank">Auszug ansehen</a>
+      </article>
+    </section>
+
+    <!-- Rechte Spalte: Projekte -->
+    <section class="output-column project-column">
+      <h2>Projekte</h2>
+      <article class="project-entry">
+        <h3 class="entry-title">Selenium-Testautomatisierung</h3>
+        <p class="entry-meta">GitHub · JavaScript · Modular</p>
+        <p>Automatisierte Tests für die eigene Website</p>
+        <a href="https://github.com/dein-projekt" target="_blank" class="project-button">Zum Projekt</a>
+      </article>
+    </section>
+  </section>
 </section>
 </body>
 </html>

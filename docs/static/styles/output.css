@@ -17,3 +17,119 @@
 .tile-link:hover {
   background-color: #444;
 }
+
+/* --- Stil der Seite --- */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.cert-entry h3,
+.thesis-entry h3,
+.project-entry h3 {
+  color: #66ccff;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.entry-meta {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.output-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.output-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.output-column h2 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #000047;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cert-entry, .thesis-entry, .project-entry {
+  background-color: rgba(255,255,255,0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.cert-entry a,
+.thesis-entry a {
+  color: #1e90ff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.project-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #1e90ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+  background-color: #000047;
+}
+
+/* --- Abstracts --- */
+details summary {
+  cursor: pointer;
+  color: #1e90ff;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+details[open] summary::after {
+  content: " ▲";
+}
+
+details summary::after {
+  content: " ▼";
+}
+
+.abstract-full {
+  margin-top: 0.5rem;
+}
+
+.thesis-type {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.05em;
+}
+
+.thesis-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
