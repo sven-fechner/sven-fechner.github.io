@@ -83,6 +83,27 @@ html, body {
   color: skyblue;
 }
 
+.profile-quote {
+  padding: 1rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #1e90ff;
+  font-size: 1rem;
+  font-style: italic;
+  color: #ccc;
+  line-height: 1.6;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-size: 0.9rem;
+}
+.profile-quote small {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #888;
+  text-align: right;
+}
+
+
 /* --- Rechte Timeline --- */
 
 /* --- Wrapper für Überschrift + Timeline --- */
