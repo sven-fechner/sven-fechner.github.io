@@ -86,3 +86,15 @@
 .xing {
   border-color: #026466;
 }
+
+/* --- Nur fuer mobile Variante --- */
+@media (max-width: 768px) {
+  .contact-layout {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .ai-quote {
+    text-align: center;
+  }
+}
