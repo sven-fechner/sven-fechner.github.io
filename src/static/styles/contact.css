@@ -26,15 +26,43 @@
   background-color: #444;
 }
 
-.contact-content h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.contact-layout {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1000px;
+  width: 100%;
 }
 
-.contact-links {
+.contact-left,
+.contact-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-left h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.contact-left p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact-right .contact-links {
   display: flex;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.ai-quote {
+  font-size: 0.9rem;
+  color: #ccc;
+  text-align: left;
+  margin-top: 1rem;
 }
 
 .contact-tile {
